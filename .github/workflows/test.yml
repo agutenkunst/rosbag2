@@ -1,13 +1,7 @@
 name: Test rosbag2
-on:
-  # pull_request:
-  push:
-    branches:
-      - master
-  schedule:
-    # Run every hour. This helps detect flakiness,
-    # and broken external dependencies.
-    - cron:  '0 * * * *'
+
+on: [push, pull_request]
+
 
 jobs:
   build_and_test:
